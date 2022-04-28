@@ -1,6 +1,7 @@
 ---
 
-- hosts: all
+- hosts:  ubuntu
+  user:   ubuntu
   become: true
   tasks:
 
@@ -20,3 +21,22 @@
       name: libapache2-mod-php
       state: latest
     when: ansible_distribution == "Ubuntu"
+
+- hosts:  centOS
+  user:   garrettcottrell
+  become: true
+  tasks:
+
+  - name: update repository index
+    dnf:
+      update_cache: yes
+
+  - name: install httpd
+    dnf:
+      name: httpd
+      state: latest
+
+  - name: add php support for httpd
+    dnf:
+      name: php
+      state: latest
