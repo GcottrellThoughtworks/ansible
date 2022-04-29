@@ -9,6 +9,16 @@
 
 10.211.55.3
 
+[web_servers]
+192.168.64.8
+192.168.64.7
+
+[file_servers]
+192.168.64.6
+
+[db_servers]
+10.211.55.3
+
 [Ubuntu:vars]
 
 ansible_user=ubuntu
