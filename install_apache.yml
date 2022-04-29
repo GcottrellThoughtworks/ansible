@@ -1,13 +1,8 @@
 ---
 
-- hosts:  ubuntu
-  user:   ubuntu
+- hosts:  all
   become: true
   tasks:
-
-  - name: Update repository index
-    apt:
-      update_cache: yes
 
   - name: Install apache2 and php packages for Ubuntu
     apt:
@@ -16,11 +11,7 @@
         - libapache2-mod-php
       state: latest
       update_cache: yes
-
-- hosts:  centOS
-  user:   garrettcottrell
-  become: true
-  tasks:
+    when: ansible_distribution == "Ubuntu"
 
   - name: Install Apache and php packages for CentOS
     dnf:
@@ -29,3 +20,4 @@
         - php
       state: latest
       update_cache: yes
+    when: ansible_distribution == "CentOS"

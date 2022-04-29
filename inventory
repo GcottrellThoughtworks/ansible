@@ -1,11 +1,13 @@
 
+[Ubuntu]
 
-192.168.64.6 ansible_user=ubuntu
-192.168.64.7 ansible_user=ubuntu
-192.168.64.8 ansible_user=ubuntu
+192.168.64.6 ansible_user=ubuntu apache_package=apache2 php_package=libapache2-mod-php
+192.168.64.7 ansible_user=ubuntu apache_package=apache2 php_package=libapache2-mod-php
+192.168.64.8 ansible_user=ubuntu apache_package=apache2 php_package=libapache2-mod-php
 
+[CentOS]
 
-10.211.55.3 ansible_user=garrettcottrell
+10.211.55.3  ansible_user=garrettcottrell apache_package=httpd php_package=php 
 
 
 
