@@ -15,19 +15,17 @@
         - apache2
         - libapache2-mod-php
       state: latest
+      update_cache: yes
 
 - hosts:  centOS
   user:   garrettcottrell
   become: true
   tasks:
 
-  - name: Update repository index
-    dnf:
-      update_cache: yes
-
-  - name: Install httpd and php packages for CentOS
+  - name: Install Apache and php packages for CentOS
     dnf:
       name: 
         - httpd
         - php
       state: latest
+      update_cache: yes
