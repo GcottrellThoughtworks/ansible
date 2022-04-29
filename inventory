@@ -1,9 +1,11 @@
 
-[ubuntu]
-192.168.64.6
-192.168.64.7
-192.168.64.8
 
-[centOS]
-10.211.55.3
+192.168.64.6 ansible_user=ubuntu
+192.168.64.7 ansible_user=ubuntu
+192.168.64.8 ansible_user=ubuntu
+
+
+10.211.55.3 ansible_user=garrettcottrell
+
+
 
