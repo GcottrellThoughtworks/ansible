@@ -28,3 +28,10 @@
         - ansible
       state: latest
     when: ansible_distribution == "Ubuntu"
+
+  -name: Install ansible for CentOS
+   dnf:
+     name:
+       - ansible
+     state: latest
+   when: ansible_distribution == "CentOS"
